@@ -32,13 +32,13 @@ const bici = [
 
 let indice = 0;
 let min = bici[0].peso;
-console.log(min);
 
 for(let i = 0; i < bici.length; i++){
-    const curBici = [bici[i]];
+    const curBici = bici[i];
     if(curBici.peso < min){
+        min = curBici.peso;
         indice = i;
     }
 }
 
-console.log(` La bici con il `);
+console.log(` La bici con il peso minore è ${bici[indice].nome}, con il peso di ${bici[indice].peso} grammi`);
